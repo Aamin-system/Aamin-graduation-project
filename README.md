@@ -1,11 +1,11 @@
 # Aamin-system for determine vioaltions of precationary measures [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/Aamin_System?s=09)
 
 By 31 December 2019, the world has faced the infamous COVID‑19 pandemic, also known as the
-coronavirus [1]. that brought many challenges to our lives. One of the most important ones is to
+coronavirus. that brought many challenges to our lives. One of the most important ones is to
 keep our distance from each other which yield to help control the virus spread to sage and eliminate
 it. Among those safety measures and precautions is maintaining a safe distance between people
 and wearing the face mask during human gatherings. Where recent statistics indicate that
-maintaining a safe distance and wearing a mask helps prevent the spread of the virus by 90% [2].
+maintaining a safe distance and wearing a mask helps prevent the spread of the virus by 90%.
 But it is difficult to implement these procedures in crowd management, and human gatherings such
 as markets, workplaces, schools and universities, and government service institutions (such as
 passports and the labor office). Accordingly, the research team reached the design and construction
