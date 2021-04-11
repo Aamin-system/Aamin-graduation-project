@@ -1,0 +1,1517 @@
+# depslib dependency file v1.0
+1603104549 source:/home/pi/Desktop/face/UltraFace.cpp
+	"UltraFace.hpp"
+	"mat.h"
+
+1603104549 /home/pi/Desktop/face/UltraFace.hpp
+	"gpu.h"
+	"net.h"
+	<algorithm>
+	<iostream>
+	<string>
+	<vector>
+
+1608555287 /usr/local/include/ncnn/gpu.h
+	"platform.h"
+	"mat.h"
+	<vulkan/vulkan.h>
+	"vulkan_header_fix.h"
+
+1608555287 /usr/local/include/ncnn/platform.h
+	<windows.h>
+	<process.h>
+	<pthread.h>
+	"simplestl.h"
+	<algorithm>
+	<list>
+	<vector>
+	<string>
+	<android/log.h>
+	<stdio.h>
+
+1608555287 /usr/local/include/ncnn/simplestl.h
+	<stddef.h>
+	<stdint.h>
+	<string.h>
+	<new>
+
+1608555287 /usr/local/include/ncnn/mat.h
+	<stdlib.h>
+	<string.h>
+	<arm_neon.h>
+	<immintrin.h>
+	"allocator.h"
+	"option.h"
+	"platform.h"
+	<vulkan/vulkan.h>
+	<android/bitmap.h>
+	<jni.h>
+
+1608555287 /usr/local/include/ncnn/allocator.h
+	<windows.h>
+	"platform.h"
+	<stdlib.h>
+	<vulkan/vulkan.h>
+	<android/hardware_buffer.h>
+
+1608555287 /usr/local/include/ncnn/option.h
+	"platform.h"
+
+1608555287 /usr/local/include/ncnn/vulkan_header_fix.h
+	<vulkan/vulkan.h>
+
+1608555287 /usr/local/include/ncnn/net.h
+	"blob.h"
+	"layer.h"
+	"mat.h"
+	"option.h"
+	"platform.h"
+	<android/asset_manager.h>
+
+1608555287 /usr/local/include/ncnn/blob.h
+	"mat.h"
+	"platform.h"
+
+1608555287 /usr/local/include/ncnn/layer.h
+	"mat.h"
+	"modelbin.h"
+	"option.h"
+	"paramdict.h"
+	"platform.h"
+	<math.h>
+	"command.h"
+	"pipeline.h"
+	<vulkan/vulkan.h>
+
+1608555287 /usr/local/include/ncnn/modelbin.h
+	"mat.h"
+
+1608555287 /usr/local/include/ncnn/paramdict.h
+	"mat.h"
+
+1608555287 /usr/local/include/ncnn/command.h
+	"platform.h"
+	"mat.h"
+	<vulkan/vulkan.h>
+
+1608555287 /usr/local/include/ncnn/pipeline.h
+	"mat.h"
+	"platform.h"
+	"gpu.h"
+	<vulkan/vulkan.h>
+
+1612197679 source:/home/pi/face/mask_ultra.cpp
+	<typeinfo>
+	<iostream>
+	<string>
+	<vector>
+	"opencv2/core.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/imgproc.hpp"
+	<opencv2/highgui.hpp>
+	"paddle_api.h"
+	"UltraFace.hpp"
+	<time.h>
+	<cstdlib>
+	<unistd.h>
+
+1602451567 /usr/local/include/opencv4/opencv2/core.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/version.hpp"
+	"opencv2/core/base.hpp"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/traits.hpp"
+	"opencv2/core/matx.hpp"
+	"opencv2/core/types.hpp"
+	"opencv2/core/mat.hpp"
+	"opencv2/core/persistence.hpp"
+	"opencv2/core/operations.hpp"
+	"opencv2/core/cvstd.inl.hpp"
+	"opencv2/core/utility.hpp"
+	"opencv2/core/optim.hpp"
+	"opencv2/core/ovx.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/cvdef.h
+	"cvconfig.h"
+	<limits>
+	<limits.h>
+	"opencv2/core/hal/interface.h"
+	"cv_cpu_dispatch.h"
+	<intrin.h>
+	<array>
+	<cstdint>
+	<stdint.h>
+	<stdint.h>
+	"opencv2/core/fast_math.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/hal/interface.h
+	<cstddef>
+	<stddef.h>
+	<stdbool.h>
+	<cstdint>
+	<stdint.h>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h
+	"cv_cpu_config.h"
+	"cv_cpu_helper.h"
+	<emmintrin.h>
+	<pmmintrin.h>
+	<tmmintrin.h>
+	<smmintrin.h>
+	<nmmintrin.h>
+	<nmmintrin.h>
+	<popcntintrin.h>
+	<immintrin.h>
+	<arm_neon.h>
+	<immintrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<Intrin.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<altivec.h>
+	"hal/msa_macros.h"
+	<wasm_simd128.h>
+	<emmintrin.h>
+	<Intrin.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<altivec.h>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/cv_cpu_helper.h
+
+1602451567 /usr/local/include/opencv4/opencv2/core/hal/msa_macros.h
+	"msa.h"
+	<stdint.h>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/fast_math.hpp
+	"opencv2/core/cvdef.h"
+	<cmath>
+	<fastmath.h>
+	<math.h>
+	<emmintrin.h>
+	<altivec.h>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/version.hpp
+
+1602451567 /usr/local/include/opencv4/opencv2/core/base.hpp
+	"opencv2/opencv_modules.hpp"
+	<climits>
+	<algorithm>
+	"opencv2/core/cvdef.h"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/neon_utils.hpp"
+	"opencv2/core/vsx_utils.hpp"
+	"opencv2/core/check.hpp"
+
+1608548041 /usr/local/include/opencv4/opencv2/opencv_modules.hpp
+
+1602451567 /usr/local/include/opencv4/opencv2/core/cvstd.hpp
+	"opencv2/core/cvdef.h"
+	<cstddef>
+	<cstring>
+	<cctype>
+	<string>
+	<algorithm>
+	<utility>
+	<cstdlib>
+	<cmath>
+	"cvstd_wrapper.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp
+	"opencv2/core/cvdef.h"
+	<string>
+	<memory>
+	<type_traits>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/neon_utils.hpp
+	"opencv2/core/cvdef.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp
+	"opencv2/core/cvdef.h"
+	<assert.h>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/check.hpp
+	<opencv2/core/base.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/traits.hpp
+	"opencv2/core/cvdef.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/matx.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/base.hpp"
+	"opencv2/core/traits.hpp"
+	"opencv2/core/saturate.hpp"
+	<initializer_list>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/saturate.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/fast_math.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/types.hpp
+	<climits>
+	<cfloat>
+	<vector>
+	<limits>
+	"opencv2/core/cvdef.h"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/matx.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/mat.hpp
+	"opencv2/core/matx.hpp"
+	"opencv2/core/types.hpp"
+	"opencv2/core/bufferpool.hpp"
+	<type_traits>
+	"opencv2/core/mat.inl.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
+
+1602451567 /usr/local/include/opencv4/opencv2/core/mat.inl.hpp
+
+1602451567 /usr/local/include/opencv4/opencv2/core/persistence.hpp
+	"opencv2/core/types.hpp"
+	"opencv2/core/mat.hpp"
+	"opencv2/core.hpp"
+	<time.h>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/operations.hpp
+	<cstdio>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp
+	<complex>
+	<ostream>
+	<sstream>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/utility.hpp
+	"opencv2/core.hpp"
+	<ostream>
+	<functional>
+	<mutex>
+	"opencv2/core/utils/instrumentation.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
+	<opencv2/core/utility.hpp>
+	<opencv2/core/utils/tls.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/utils/tls.hpp
+	<opencv2/core/utility.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/optim.hpp
+	"opencv2/core.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/ovx.hpp
+	"cvdef.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/imgcodecs.hpp
+	"opencv2/core.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/imgproc.hpp
+	"opencv2/core.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/highgui.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/videoio.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/videoio.hpp
+	"opencv2/core.hpp"
+
+1611763634 /usr/local/include/paddle-lite/paddle_api.h
+	<memory>
+	<string>
+	<vector>
+	"paddle_place.h"
+
+1611763634 /usr/local/include/paddle-lite/paddle_place.h
+	<set>
+	<string>
+
+1603104549 /home/pi/face/UltraFace.hpp
+	"gpu.h"
+	"net.h"
+	<algorithm>
+	<iostream>
+	<string>
+	<vector>
+
+1603104549 source:/home/pi/face/UltraFace.cpp
+	"UltraFace.hpp"
+	"mat.h"
+
+1611947872 source:/home/pi/Desktop/face/mask_ultra.cpp
+	<typeinfo>
+	<iostream>
+	<string>
+	<vector>
+	"opencv2/core.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/imgproc.hpp"
+	<opencv2/highgui.hpp>
+	"paddle_api.h"
+	"UltraFace.hpp"
+	<time.h>
+	<cstdlib>
+	<thread>
+	<unistd.h>
+
+1612202173 source:/home/pi/Desktop/face1/UltraFace.cpp
+	"UltraFace.hpp"
+	"/home/pi/ncnn/src/mat.h"
+
+1612199918 /home/pi/Desktop/face1/UltraFace.hpp
+	"/usr/local/include/opencv4/opencv2/core/cuda.hpp"
+	"/usr/local/include/ncnn/net.h"
+	<algorithm>
+	<iostream>
+	<string>
+	<vector>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/cuda.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda_types.hpp"
+	<opencv2/opencv.hpp>
+	"opencv2/core/cuda.inl.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/cuda_types.hpp
+
+1602451567 /usr/local/include/opencv4/opencv2/opencv.hpp
+	"opencv2/opencv_modules.hpp"
+	"opencv2/core.hpp"
+	"opencv2/calib3d.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/dnn.hpp"
+	"opencv2/flann.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	"opencv2/objdetect.hpp"
+	"opencv2/photo.hpp"
+	"opencv2/stitching.hpp"
+	"opencv2/video.hpp"
+	"opencv2/videoio.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/calib3d.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/core/affine.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/features2d.hpp
+	"opencv2/opencv_modules.hpp"
+	"opencv2/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/miniflann.hpp
+	"opencv2/core.hpp"
+	"opencv2/flann/defines.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/defines.h
+	"config.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/config.h
+
+1602451567 /usr/local/include/opencv4/opencv2/core/affine.hpp
+	<opencv2/core.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/dnn.hpp
+	<opencv2/dnn/dnn.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/dnn/dnn.hpp
+	<vector>
+	<opencv2/core.hpp>
+	"opencv2/core/async.hpp"
+	"../dnn/version.hpp"
+	<opencv2/dnn/dict.hpp>
+	<opencv2/dnn/layer.hpp>
+	<opencv2/dnn/dnn.inl.hpp>
+	<opencv2/dnn/utils/inference_engine.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/core/async.hpp
+	<opencv2/core/mat.hpp>
+	<chrono>
+
+1602451567 /usr/local/include/opencv4/opencv2/dnn/version.hpp
+
+1602451567 /usr/local/include/opencv4/opencv2/dnn/dict.hpp
+	<opencv2/core.hpp>
+	<map>
+	<ostream>
+	<opencv2/dnn/dnn.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/dnn/layer.hpp
+	<opencv2/dnn.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp
+	<opencv2/dnn.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp
+	"../dnn.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann.hpp
+	"opencv2/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+	"opencv2/flann/flann_base.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/flann_base.hpp
+	<vector>
+	<cstdio>
+	"general.h"
+	"matrix.h"
+	"params.h"
+	"saving.h"
+	"all_indices.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/general.h
+	"opencv2/core.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/matrix.h
+	<stdio.h>
+	"general.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/params.h
+	"any.h"
+	"general.h"
+	<iostream>
+	<map>
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/any.h
+	"defines.h"
+	<stdexcept>
+	<ostream>
+	<typeinfo>
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/saving.h
+	<cstring>
+	<vector>
+	"general.h"
+	"nn_index.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/nn_index.h
+	"general.h"
+	"matrix.h"
+	"result_set.h"
+	"params.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/result_set.h
+	<algorithm>
+	<cstring>
+	<iostream>
+	<limits>
+	<set>
+	<vector>
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/all_indices.h
+	"general.h"
+	"nn_index.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"hierarchical_clustering_index.h"
+	"lsh_index.h"
+	"autotuned_index.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/kdtree_index.h
+	<algorithm>
+	<map>
+	<cstring>
+	"general.h"
+	"nn_index.h"
+	"dynamic_bitset.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h
+	<boost/dynamic_bitset.hpp>
+	<limits.h>
+	"dist.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/dist.h
+	<cmath>
+	<cstdlib>
+	<string.h>
+	<stdint.h>
+	"defines.h"
+	<Intrin.h>
+	"arm_neon.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/heap.h
+	<algorithm>
+	<vector>
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/allocator.h
+	<stdlib.h>
+	<stdio.h>
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/random.h
+	<algorithm>
+	<cstdlib>
+	<vector>
+	"general.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h
+	<algorithm>
+	<map>
+	<cstring>
+	"general.h"
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/kmeans_index.h
+	<algorithm>
+	<map>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+	"logger.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/logger.h
+	<stdio.h>
+	<stdarg.h>
+	"defines.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/composite_index.h
+	"general.h"
+	"nn_index.h"
+	"kdtree_index.h"
+	"kmeans_index.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/linear_index.h
+	"general.h"
+	"nn_index.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h
+	<algorithm>
+	<map>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/lsh_index.h
+	<algorithm>
+	<cstring>
+	<map>
+	<vector>
+	"general.h"
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"lsh_table.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/lsh_table.h
+	<algorithm>
+	<iostream>
+	<iomanip>
+	<limits.h>
+	<unordered_map>
+	<map>
+	<math.h>
+	<stddef.h>
+	"dynamic_bitset.h"
+	"matrix.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/autotuned_index.h
+	<sstream>
+	"general.h"
+	"nn_index.h"
+	"ground_truth.h"
+	"index_testing.h"
+	"sampling.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"logger.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/ground_truth.h
+	"dist.h"
+	"matrix.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/index_testing.h
+	<cstring>
+	<cmath>
+	"matrix.h"
+	"nn_index.h"
+	"result_set.h"
+	"logger.h"
+	"timer.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/timer.h
+	<time.h>
+	"opencv2/core.hpp"
+	"opencv2/core/utility.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/flann/sampling.h
+	"matrix.h"
+	"random.h"
+
+1602451567 /usr/local/include/opencv4/opencv2/ml.hpp
+	"opencv2/core.hpp"
+	<float.h>
+	<map>
+	<iostream>
+	<opencv2/ml/ml.inl.hpp>
+
+1602451567 /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp
+
+1602451567 /usr/local/include/opencv4/opencv2/objdetect.hpp
+	"opencv2/core.hpp"
+	"opencv2/objdetect/detection_based_tracker.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp
+	<opencv2/core.hpp>
+	<vector>
+
+1602451567 /usr/local/include/opencv4/opencv2/photo.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgproc.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/stitching/warpers.hpp"
+	"opencv2/stitching/detail/matchers.hpp"
+	"opencv2/stitching/detail/motion_estimators.hpp"
+	"opencv2/stitching/detail/exposure_compensate.hpp"
+	"opencv2/stitching/detail/seam_finders.hpp"
+	"opencv2/stitching/detail/blenders.hpp"
+	"opencv2/stitching/detail/camera.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/warpers.hpp
+	"opencv2/stitching/detail/warpers.hpp"
+	<string>
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/opencv_modules.hpp"
+	"warpers_inl.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp
+	"opencv2/core.hpp"
+	"warpers.hpp"
+	<limits>
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/opencv_modules.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp
+	"opencv2/core.hpp"
+	"matchers.hpp"
+	"util.hpp"
+	"camera.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/util.hpp
+	<list>
+	"opencv2/core.hpp"
+	"util_inl.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp
+	<queue>
+	"opencv2/core.hpp"
+	"util.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp
+	"opencv2/core.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp
+	"opencv2/core.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp
+	<set>
+	"opencv2/core.hpp"
+	"opencv2/opencv_modules.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/video.hpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/video/background_segm.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/video/tracking.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgproc.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/video/background_segm.hpp
+	"opencv2/core.hpp"
+
+1602451567 /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp
+	"opencv2/core/cuda.hpp"
+
+1608554739 /home/pi/ncnn/src/mat.h
+	<stdlib.h>
+	<string.h>
+	<arm_neon.h>
+	<immintrin.h>
+	"allocator.h"
+	"option.h"
+	"platform.h"
+	<vulkan/vulkan.h>
+	<android/bitmap.h>
+	<jni.h>
+
+1608554739 /home/pi/ncnn/src/allocator.h
+	<windows.h>
+	"platform.h"
+	<stdlib.h>
+	<vulkan/vulkan.h>
+	<android/hardware_buffer.h>
+
+1608554739 /home/pi/ncnn/src/option.h
+	"platform.h"
+
+1612370502 source:/home/pi/Desktop/face1/mask_ultra.cpp
+	<ctime>
+	<cmath>
+	<typeinfo>
+	<iostream>
+	<string>
+	<vector>
+	<opencv2/highgui.hpp>
+	"opencv2/imgproc.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/core.hpp"
+	"/home/pi/Paddle-Lite/lite/api/paddle_api.h"
+	"UltraFace.hpp"
+	<time.h>
+	<cstdlib>
+	<unistd.h>
+	<chrono>
+	"/Poco/Timer.h"
+	"/Poco/Foundation/include/Poco/Thread.h"
+
+1600911394 /home/pi/Paddle-Lite/lite/api/paddle_api.h
+	<memory>
+	<string>
+	<vector>
+	"paddle_place.h"
+
+1612200165 /home/pi/Paddle-Lite/lite/api/paddle_place.h
+	<set>
+	<string>
+
+1612283626 /Poco/Util/Timer.h
+	"/home/pi/poco/Util/include/Poco/Util/Util.h"
+	"/Poco/Util/TimerTask.h"
+	"/Poco/Foundation/include/Poco/TimedNotificationQueue.h"
+	"/Poco/Foundation/include/Poco/Thread.h"
+	"/Poco/Foundation/include/Poco/Runnable.h"
+
+1612270328 /home/pi/poco/Util/include/Poco/Util/Util.h
+	"/home/pi/poco/Foundation/include/Poco/Foundation.h"
+
+1612271216 /home/pi/poco/Foundation/include/Poco/Foundation.h
+	"/home/pi/poco/Foundation/include/Poco/Config.h"
+	"/home/pi/poco/Foundation/include/Poco/Platform.h"
+	"Poco/Platform_WIN32.h"
+	"Poco/Platform_VX.h"
+	"/home/pi/poco/Foundation/include/Poco/Platform_POSIX.h"
+	"/home/pi/poco/Foundation/include/Poco/Alignment.h"
+	"/home/pi/poco/Foundation/include/Poco/Bugcheck.h"
+	"/home/pi/poco/Foundation/include/Poco/Types.h"
+	<string>
+
+1612195966 /home/pi/poco/Foundation/include/Poco/Config.h
+
+1612195966 /home/pi/poco/Foundation/include/Poco/Platform.h
+
+1612195966 /home/pi/poco/Foundation/include/Poco/Platform_POSIX.h
+
+1612195966 /home/pi/poco/Foundation/include/Poco/Alignment.h
+	<type_traits>
+
+1612271204 /home/pi/poco/Foundation/include/Poco/Bugcheck.h
+	"/home/pi/poco/Foundation/include/Poco/Foundation.h"
+	<string>
+	<cstdlib>
+	<iostream>
+	<cstdlib>
+
+1612271232 /home/pi/poco/Foundation/include/Poco/Types.h
+	"/home/pi/poco/Foundation/include/Poco/Foundation.h"
+	<cstdint>
+
+1612283581 /Poco/Util/TimerTask.h
+	"/Poco/Util/Util.h"
+	"/Poco/Foundation/include/Poco/Runnable.h"
+	"/Poco/Foundation/include/Poco/RefCountedObject.h"
+	"/Poco/Foundation/include/Poco/AutoPtr.h"
+	"/Poco/Foundation/include//Poco/Timestamp.h"
+
+1612270895 /Poco/Util/Util.h
+	"/home/pi/poco/Foundation/include/Poco/Foundation.h"
+
+1612283033 /Poco/Foundation/include/Poco/Runnable.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+
+1612359092 /Poco/Foundation/include/Poco/Foundation.h
+	"/Poco/Foundation/include/Poco/Config.h"
+	"/Poco/Foundation/include/Poco/Platform.h"
+	"Poco/Platform_WIN32.h"
+	"Poco/Platform_VX.h"
+	"/Poco/Foundation/include/Poco/Platform_POSIX.h"
+	"/Poco/Foundation/include/Poco/Alignment.h"
+	"/Poco/Foundation/include/Poco/Bugcheck.h"
+	"/Poco/Foundation/include/Poco/Types.h"
+	<string>
+
+1612283088 /Poco/Foundation/include/Poco/RefCountedObject.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/AtomicCounter.h"
+
+1612283100 /Poco/Foundation/include/Poco/AtomicCounter.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	<atomic>
+
+1612283146 /Poco/Foundation/include/Poco/AutoPtr.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Exception.h"
+	<algorithm>
+	<cstddef>
+
+1612283556 /Poco/Foundation/include/Poco/Exception.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	<stdexcept>
+
+1612283588 /Poco/Foundation/include//Poco/Timestamp.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	<ctime>
+
+1612283673 /Poco/Foundation/include/Poco/TimedNotificationQueue.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Notification.h"
+	"/Poco/Foundation/include/Poco/Mutex.h"
+	"/Poco/Foundation/include/Poco/Event.h"
+	"/Poco/Foundation/include/Poco/Timestamp.h"
+	"/Poco/Foundation/include/Poco/Clock.h"
+	<map>
+
+1612283738 /Poco/Foundation/include/Poco/Notification.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Mutex.h"
+	"/Poco/Foundation/include/Poco/RefCountedObject.h"
+	"/Poco/Foundation/include/Poco/AutoPtr.h"
+
+1612283797 /Poco/Foundation/include/Poco/Mutex.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Exception.h"
+	"/Poco/Foundation/include/Poco/ScopedLock.h"
+	"/Poco/Foundation/include/Poco/Timestamp.h"
+	<atomic>
+	"Poco/Mutex_WINCE.h"
+	"Poco/Mutex_WIN32.h"
+	"Poco/Mutex_VX.h"
+	"/Poco/Foundation/include/Poco/Mutex_POSIX.h"
+
+1612283765 /Poco/Foundation/include/Poco/ScopedLock.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+
+1612283588 /Poco/Foundation/include/Poco/Timestamp.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	<ctime>
+
+1612283810 /Poco/Foundation/include/Poco/Mutex_POSIX.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Exception.h"
+	<pthread.h>
+	<errno.h>
+
+1612283835 /Poco/Foundation/include/Poco/Event.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Exception.h"
+	"Poco/Event_WIN32.h"
+	"Poco/Event_VX.h"
+	"/Poco/Foundation/include/Poco/Event_POSIX.h"
+
+1612283847 /Poco/Foundation/include/Poco/Event_POSIX.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Exception.h"
+	<pthread.h>
+	<errno.h>
+
+1612283859 /Poco/Foundation/include/Poco/Clock.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+
+1612283885 /Poco/Foundation/include/Poco/Thread.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Event.h"
+	"/Poco/Foundation/include/Poco/Mutex.h"
+	"Poco/Thread_WINCE.h"
+	"Poco/Thread_WIN32.h"
+	"Poco/Thread_VX.h"
+	"/Poco/Foundation/include/Poco/Thread_POSIX.h"
+
+1612283915 /Poco/Foundation/include/Poco/Thread_POSIX.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Runnable.h"
+	"/Poco/Foundation/include/Poco/SignalHandler.h"
+	"/Poco/Foundation/include/Poco/Event.h"
+	"/Poco/Foundation/include/Poco/RefCountedObject.h"
+	"/Poco/Foundation/include/Poco/AutoPtr.h"
+	"/Poco/Foundation/include/Poco/SharedPtr.h"
+	<pthread.h>
+	<limits.h>
+	<sys/select.h>
+	<errno.h>
+	<cstring>
+
+1612283935 /Poco/Foundation/include/Poco/SignalHandler.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	<vector>
+	<setjmp.h>
+
+1612284065 /Poco/Foundation/include/Poco/SharedPtr.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Exception.h"
+	"/Poco/Foundation/include/Poco/AtomicCounter.h"
+	<algorithm>
+	<cstddef>
+
+1612358902 /Poco/Timer.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	"/Poco/Foundation/include/Poco/Runnable.h"
+	"/Poco/Foundation/include/Poco/Mutex.h"
+	"/Poco/Foundation/include/Poco/Event.h"
+	"/Poco/Foundation/include/Poco/Thread.h"
+	"/Poco/Foundation/include/Poco/Clock.h"
+
+1612270893 /Poco/Foundation/include/Poco/Config.h
+
+1612270894 /Poco/Foundation/include/Poco/Platform.h
+
+1612270894 /Poco/Foundation/include/Poco/Platform_POSIX.h
+
+1612270893 /Poco/Foundation/include/Poco/Alignment.h
+	<type_traits>
+
+1612359101 /Poco/Foundation/include/Poco/Bugcheck.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	<string>
+	<cstdlib>
+	<iostream>
+	<cstdlib>
+
+1612359108 /Poco/Foundation/include/Poco/Types.h
+	"/Poco/Foundation/include/Poco/Foundation.h"
+	<cstdint>
+
+1612202173 source:/home/pi/Desktop/face2-stable/UltraFace.cpp
+	"UltraFace.hpp"
+	"/home/pi/ncnn/src/mat.h"
+
+1612199918 /home/pi/Desktop/face2-stable/UltraFace.hpp
+	"/usr/local/include/opencv4/opencv2/core/cuda.hpp"
+	"/usr/local/include/ncnn/net.h"
+	<algorithm>
+	<iostream>
+	<string>
+	<vector>
+
+1613334165 source:/home/pi/Desktop/face2-stable/mask_ultra.cpp
+	"/usr/include/python3.7m/Python.h"
+	<ctime>
+	<cmath>
+	<typeinfo>
+	<iostream>
+	<string>
+	<vector>
+	<opencv2/highgui.hpp>
+	"opencv2/imgproc.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/core.hpp"
+	"/home/pi/Paddle-Lite/lite/api/paddle_api.h"
+	"UltraFace.hpp"
+	<time.h>
+	<cstdlib>
+	<unistd.h>
+	<chrono>
+
+1611345884 /usr/include/python3.7m/Python.h
+	"patchlevel.h"
+	"pyconfig.h"
+	"pymacconfig.h"
+	<limits.h>
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+	<unistd.h>
+	<crypt.h>
+	<stddef.h>
+	<assert.h>
+	"pyport.h"
+	"pymacro.h"
+	"pyatomic.h"
+	"pymath.h"
+	"pytime.h"
+	"pymem.h"
+	"object.h"
+	"objimpl.h"
+	"typeslots.h"
+	"pyhash.h"
+	"pydebug.h"
+	"bytearrayobject.h"
+	"bytesobject.h"
+	"unicodeobject.h"
+	"longobject.h"
+	"longintrepr.h"
+	"boolobject.h"
+	"floatobject.h"
+	"complexobject.h"
+	"rangeobject.h"
+	"memoryobject.h"
+	"tupleobject.h"
+	"listobject.h"
+	"dictobject.h"
+	"odictobject.h"
+	"enumobject.h"
+	"setobject.h"
+	"methodobject.h"
+	"moduleobject.h"
+	"funcobject.h"
+	"classobject.h"
+	"fileobject.h"
+	"pycapsule.h"
+	"traceback.h"
+	"sliceobject.h"
+	"cellobject.h"
+	"iterobject.h"
+	"genobject.h"
+	"descrobject.h"
+	"warnings.h"
+	"weakrefobject.h"
+	"structseq.h"
+	"namespaceobject.h"
+	"codecs.h"
+	"pyerrors.h"
+	"pystate.h"
+	"context.h"
+	"pyarena.h"
+	"modsupport.h"
+	"compile.h"
+	"pythonrun.h"
+	"pylifecycle.h"
+	"ceval.h"
+	"sysmodule.h"
+	"osmodule.h"
+	"intrcheck.h"
+	"import.h"
+	"abstract.h"
+	"bltinmodule.h"
+	"eval.h"
+	"pyctype.h"
+	"pystrtod.h"
+	"pystrcmp.h"
+	"dtoa.h"
+	"fileutils.h"
+	"pyfpe.h"
+
+1611345884 /usr/include/python3.7m/patchlevel.h
+
+1611345884 /usr/include/python3.7m/pyconfig.h
+	<x86_64-linux-gnu/python3.7m/pyconfig.h>
+	<x86_64-linux-gnux32/python3.7m/pyconfig.h>
+	<i386-linux-gnu/python3.7m/pyconfig.h>
+	<aarch64-linux-gnu/python3.7m/pyconfig.h>
+	<alpha-linux-gnu/python3.7m/pyconfig.h>
+	<arm-linux-gnueabihf/python3.7m/pyconfig.h>
+	<arm-linux-gnueabi/python3.7m/pyconfig.h>
+	<hppa-linux-gnu/python3.7m/pyconfig.h>
+	<ia64-linux-gnu/python3.7m/pyconfig.h>
+	<m68k-linux-gnu/python3.7m/pyconfig.h>
+	<mipsisa32r6el-linux-gnu/python3.7m/pyconfig.h>
+	<mipsisa64r6el-linux-gnuabin32/python3.7m/pyconfig.h>
+	<mipsisa64r6el-linux-gnuabi64/python3.7m/pyconfig.h>
+	<mipsisa32r6-linux-gnu/python3.7m/pyconfig.h>
+	<mipsisa64r6-linux-gnuabin32/python3.7m/pyconfig.h>
+	<mipsisa64r6-linux-gnuabi64/python3.7m/pyconfig.h>
+	<mipsel-linux-gnu/python3.7m/pyconfig.h>
+	<mips64el-linux-gnuabin32/python3.7m/pyconfig.h>
+	<mips64el-linux-gnuabi64/python3.7m/pyconfig.h>
+	<mips-linux-gnu/python3.7m/pyconfig.h>
+	<mips64-linux-gnuabin32/python3.7m/pyconfig.h>
+	<mips64-linux-gnuabi64/python3.7m/pyconfig.h>
+	<or1k-linux-gnu/python3.7m/pyconfig.h>
+	<powerpc-linux-gnuspe/python3.7m/pyconfig.h>
+	<powerpc64le-linux-gnu/python3.7m/pyconfig.h>
+	<powerpc64-linux-gnu/python3.7m/pyconfig.h>
+	<powerpc-linux-gnu/python3.7m/pyconfig.h>
+	<s390x-linux-gnu/python3.7m/pyconfig.h>
+	<s390-linux-gnu/python3.7m/pyconfig.h>
+	<sh4-linux-gnu/python3.7m/pyconfig.h>
+	<sparc64-linux-gnu/python3.7m/pyconfig.h>
+	<sparc-linux-gnu/python3.7m/pyconfig.h>
+	<riscv64-linux-gnu/python3.7m/pyconfig.h>
+	<riscv32-linux-gnu/python3.7m/pyconfig.h>
+	<x86_64-kfreebsd-gnu/python3.7m/pyconfig.h>
+	<i386-kfreebsd-gnu/python3.7m/pyconfig.h>
+	<i386-gnu/python3.7m/pyconfig.h>
+
+1611345884 /usr/include/python3.7m/pymacconfig.h
+
+1611345884 /usr/include/python3.7m/pyport.h
+	"pyconfig.h"
+	<inttypes.h>
+	<stdlib.h>
+	<ieeefp.h>
+	<math.h>
+	<sys/time.h>
+	<time.h>
+	<sys/time.h>
+	<time.h>
+	<sys/select.h>
+	<sys/stat.h>
+	<stat.h>
+	<sys/types.h>
+	<sys/termio.h>
+	<ctype.h>
+	<wctype.h>
+
+1611345884 /usr/include/python3.7m/pymacro.h
+
+1611345884 /usr/include/python3.7m/pyatomic.h
+	"dynamic_annotations.h"
+	"pyconfig.h"
+	<stdatomic.h>
+	<intrin.h>
+	<immintrin.h>
+
+1611345884 /usr/include/python3.7m/dynamic_annotations.h
+
+1611345884 /usr/include/python3.7m/pymath.h
+	"pyconfig.h"
+
+1611345884 /usr/include/python3.7m/pytime.h
+	"pyconfig.h"
+	"object.h"
+
+1611345884 /usr/include/python3.7m/object.h
+
+1611345884 /usr/include/python3.7m/pymem.h
+	"pyport.h"
+
+1611345884 /usr/include/python3.7m/objimpl.h
+	"pymem.h"
+
+1611345884 /usr/include/python3.7m/typeslots.h
+
+1611345884 /usr/include/python3.7m/pyhash.h
+
+1611345884 /usr/include/python3.7m/pydebug.h
+
+1611345884 /usr/include/python3.7m/bytearrayobject.h
+	<stdarg.h>
+
+1611345884 /usr/include/python3.7m/bytesobject.h
+	<stdarg.h>
+
+1611345884 /usr/include/python3.7m/unicodeobject.h
+	<stdarg.h>
+	<ctype.h>
+	<wchar.h>
+
+1611345884 /usr/include/python3.7m/longobject.h
+
+1611345884 /usr/include/python3.7m/longintrepr.h
+
+1611345884 /usr/include/python3.7m/boolobject.h
+
+1611345884 /usr/include/python3.7m/floatobject.h
+
+1611345884 /usr/include/python3.7m/complexobject.h
+
+1611345884 /usr/include/python3.7m/rangeobject.h
+
+1611345884 /usr/include/python3.7m/memoryobject.h
+
+1611345884 /usr/include/python3.7m/tupleobject.h
+
+1611345884 /usr/include/python3.7m/listobject.h
+
+1611345884 /usr/include/python3.7m/dictobject.h
+
+1611345884 /usr/include/python3.7m/odictobject.h
+
+1611345884 /usr/include/python3.7m/enumobject.h
+
+1611345884 /usr/include/python3.7m/setobject.h
+
+1611345884 /usr/include/python3.7m/methodobject.h
+
+1611345884 /usr/include/python3.7m/moduleobject.h
+
+1611345884 /usr/include/python3.7m/funcobject.h
+
+1611345884 /usr/include/python3.7m/classobject.h
+
+1611345884 /usr/include/python3.7m/fileobject.h
+
+1611345884 /usr/include/python3.7m/pycapsule.h
+
+1611345884 /usr/include/python3.7m/traceback.h
+	"pystate.h"
+
+1611345884 /usr/include/python3.7m/pystate.h
+	"pythread.h"
+
+1611345884 /usr/include/python3.7m/pythread.h
+	<pthread.h>
+
+1611345884 /usr/include/python3.7m/sliceobject.h
+
+1611345884 /usr/include/python3.7m/cellobject.h
+
+1611345884 /usr/include/python3.7m/iterobject.h
+
+1611345884 /usr/include/python3.7m/genobject.h
+
+1611345884 /usr/include/python3.7m/descrobject.h
+
+1611345884 /usr/include/python3.7m/warnings.h
+
+1611345884 /usr/include/python3.7m/weakrefobject.h
+
+1611345884 /usr/include/python3.7m/structseq.h
+
+1611345884 /usr/include/python3.7m/namespaceobject.h
+
+1611345884 /usr/include/python3.7m/codecs.h
+
+1611345884 /usr/include/python3.7m/pyerrors.h
+	<stdarg.h>
+
+1611345884 /usr/include/python3.7m/context.h
+
+1611345884 /usr/include/python3.7m/pyarena.h
+
+1611345884 /usr/include/python3.7m/modsupport.h
+	<stdarg.h>
+
+1611345884 /usr/include/python3.7m/compile.h
+	"code.h"
+
+1611345884 /usr/include/python3.7m/code.h
+
+1611345884 /usr/include/python3.7m/pythonrun.h
+
+1611345884 /usr/include/python3.7m/pylifecycle.h
+
+1611345884 /usr/include/python3.7m/ceval.h
+
+1611345884 /usr/include/python3.7m/sysmodule.h
+
+1611345884 /usr/include/python3.7m/osmodule.h
+
+1611345884 /usr/include/python3.7m/intrcheck.h
+
+1611345884 /usr/include/python3.7m/import.h
+
+1611345884 /usr/include/python3.7m/abstract.h
+
+1611345884 /usr/include/python3.7m/bltinmodule.h
+
+1611345884 /usr/include/python3.7m/eval.h
+
+1611345884 /usr/include/python3.7m/pyctype.h
+
+1611345884 /usr/include/python3.7m/pystrtod.h
+
+1611345884 /usr/include/python3.7m/pystrcmp.h
+
+1611345884 /usr/include/python3.7m/dtoa.h
+
+1611345884 /usr/include/python3.7m/fileutils.h
+
+1611345884 /usr/include/python3.7m/pyfpe.h
+
+1615197041 source:/home/pi/Desktop/face-python/mask_ultra.cpp
+	"/usr/include/python3.7m/Python.h"
+	<ctime>
+	<cmath>
+	<memory>
+	<typeinfo>
+	<iostream>
+	<string>
+	<vector>
+	<opencv2/highgui.hpp>
+	"opencv2/imgproc.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/core.hpp"
+	"/home/pi/Paddle-Lite/lite/api/paddle_api.h"
+	"UltraFace.hpp"
+	<time.h>
+	<cstdlib>
+	<unistd.h>
+	<chrono>
+	</usr/include/boost/beast/core.hpp>
+	</usr/include/boost/beast/http.hpp>
+	</usr/include/boost/beast/version.hpp>
+	</usr/include/boost/asio/ip/tcp.hpp>
+	</usr/include/boost/config.hpp>
+	<thread>
+
+1612199918 /home/pi/Desktop/face-python/UltraFace.hpp
+	"/usr/local/include/opencv4/opencv2/core/cuda.hpp"
+	"/usr/local/include/ncnn/net.h"
+	<algorithm>
+	<iostream>
+	<string>
+	<vector>
+
+1580066404 /usr/include/boost/beast/core.hpp
+	<boost/beast/core/detail/config.hpp>
+	<boost/beast/core/bind_handler.hpp>
+	<boost/beast/core/buffered_read_stream.hpp>
+	<boost/beast/core/buffers_adapter.hpp>
+	<boost/beast/core/buffers_cat.hpp>
+	<boost/beast/core/buffers_prefix.hpp>
+	<boost/beast/core/buffers_suffix.hpp>
+	<boost/beast/core/buffers_to_string.hpp>
+	<boost/beast/core/error.hpp>
+	<boost/beast/core/file.hpp>
+	<boost/beast/core/file_base.hpp>
+	<boost/beast/core/file_posix.hpp>
+	<boost/beast/core/file_stdio.hpp>
+	<boost/beast/core/file_win32.hpp>
+	<boost/beast/core/flat_buffer.hpp>
+	<boost/beast/core/flat_static_buffer.hpp>
+	<boost/beast/core/handler_ptr.hpp>
+	<boost/beast/core/multi_buffer.hpp>
+	<boost/beast/core/ostream.hpp>
+	<boost/beast/core/read_size.hpp>
+	<boost/beast/core/span.hpp>
+	<boost/beast/core/static_buffer.hpp>
+	<boost/beast/core/static_string.hpp>
+	<boost/beast/core/string.hpp>
+	<boost/beast/core/string_param.hpp>
+	<boost/beast/core/type_traits.hpp>
+
+1580066404 /usr/include/boost/beast/http.hpp
+	<boost/beast/core/detail/config.hpp>
+	<boost/beast/http/basic_dynamic_body.hpp>
+	<boost/beast/http/basic_parser.hpp>
+	<boost/beast/http/buffer_body.hpp>
+	<boost/beast/http/chunk_encode.hpp>
+	<boost/beast/http/dynamic_body.hpp>
+	<boost/beast/http/empty_body.hpp>
+	<boost/beast/http/error.hpp>
+	<boost/beast/http/field.hpp>
+	<boost/beast/http/fields.hpp>
+	<boost/beast/http/file_body.hpp>
+	<boost/beast/http/message.hpp>
+	<boost/beast/http/parser.hpp>
+	<boost/beast/http/read.hpp>
+	<boost/beast/http/rfc7230.hpp>
+	<boost/beast/http/serializer.hpp>
+	<boost/beast/http/span_body.hpp>
+	<boost/beast/http/status.hpp>
+	<boost/beast/http/string_body.hpp>
+	<boost/beast/http/type_traits.hpp>
+	<boost/beast/http/vector_body.hpp>
+	<boost/beast/http/verb.hpp>
+	<boost/beast/http/write.hpp>
+
+1580066404 /usr/include/boost/beast/version.hpp
+	<boost/beast/core/detail/config.hpp>
+	<boost/config.hpp>
+
+1580066404 /usr/include/boost/asio/ip/tcp.hpp
+	<boost/asio/detail/config.hpp>
+	<boost/asio/basic_socket_acceptor.hpp>
+	<boost/asio/basic_socket_iostream.hpp>
+	<boost/asio/basic_stream_socket.hpp>
+	<boost/asio/detail/socket_option.hpp>
+	<boost/asio/detail/socket_types.hpp>
+	<boost/asio/ip/basic_endpoint.hpp>
+	<boost/asio/ip/basic_resolver.hpp>
+	<boost/asio/ip/basic_resolver_iterator.hpp>
+	<boost/asio/ip/basic_resolver_query.hpp>
+	<boost/asio/detail/push_options.hpp>
+	<boost/asio/detail/pop_options.hpp>
+
+1580066404 /usr/include/boost/config.hpp
+	<boost/config/user.hpp>
+	<boost/config/detail/select_compiler_config.hpp>
+	<boost/config/detail/select_stdlib_config.hpp>
+	<boost/config/detail/select_platform_config.hpp>
+	<boost/config/detail/suffix.hpp>
+
+1612202173 source:/home/pi/Desktop/face-python/UltraFace.cpp
+	"UltraFace.hpp"
+	"/home/pi/ncnn/src/mat.h"
+
+1612202173 source:/home/pi/Desktop/Aamin-occupancy/UltraFace.cpp
+	"UltraFace.hpp"
+	"/home/pi/ncnn/src/mat.h"
+
+1612199918 /home/pi/Desktop/Aamin-occupancy/UltraFace.hpp
+	"/usr/local/include/opencv4/opencv2/core/cuda.hpp"
+	"/usr/local/include/ncnn/net.h"
+	<algorithm>
+	<iostream>
+	<string>
+	<vector>
+
+1618126381 source:/home/pi/Desktop/Aamin-occupancy/mask_ultra.cpp
+	"/usr/include/python3.7m/Python.h"
+	<ctime>
+	<cmath>
+	<memory>
+	<typeinfo>
+	<iostream>
+	<string>
+	<vector>
+	<opencv2/highgui.hpp>
+	"opencv2/imgproc.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/core.hpp"
+	"/home/pi/Paddle-Lite/lite/api/paddle_api.h"
+	"UltraFace.hpp"
+	<time.h>
+	<cstdlib>
+	<unistd.h>
+	<chrono>
+	</usr/include/boost/beast/core.hpp>
+	</usr/include/boost/beast/http.hpp>
+	</usr/include/boost/beast/version.hpp>
+	</usr/include/boost/asio/ip/tcp.hpp>
+	</usr/include/boost/config.hpp>
+	<thread>
+

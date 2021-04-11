@@ -1,0 +1,56 @@
+<script>
+    function addNote(Notif){
+        if("{{ Note }}" == "True"){
+    var myArray = JSON.parse(localStorage.getItem("notification"));
+    if (myArray && Array.isArray((myArray))) {
+
+           
+        myArray.push(Notif);
+        localStorage.setItem('notification', JSON.stringify(myArray))
+        console.log(localStorage.getItem('notification'));
+
+    }
+    else{
+        localStorage.setItem("notification", "[]");
+
+    }
+}
+    show();
+}
+
+    
+    function removeNote(){
+    var myArray = JSON.parse(localStorage.getItem("notification"));
+    if (myArray && Array.isArray((myArray))) {
+        
+        myArray.shift();
+        localStorage.setItem("notification", JSON.stringify(myArray));
+        console.log(localStorage.getItem('notification'));
+
+    }
+    else{
+        localStorage.setItem("notification", "[]");
+    }
+    show();
+    }
+    function show(){
+        var y = document.getElementById("NumberOfNote");
+        var x = document.getElementById("badge");
+        var storedNames = JSON.parse(localStorage.getItem("notification"));
+        if (storedNames.length == 0){
+            x.innerHTML = "";
+            y.innerHTML = "You have no Notifications";
+        }
+        else{
+            x.innerHTML = storedNames.length;
+            y.innerHTML = "You have "+storedNames.length+" notifications";
+        }
+    }
+    function setToZero(){
+        localStorage.setItem("notification", "[]");
+    }  
+    show();
+  </script>
+  <script>
+      
+  </script>

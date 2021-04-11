@@ -1,0 +1,76 @@
+    <div class="sidebar" data-color="green" data-background-color="white" data-image="/static/assets/img/sidebar-1.jpg">
+      <div class="logo">
+        <a target="_blank" rel="noopener noreferrer" 
+           href="/" class="simple-text logo-normal">
+           Aamin Dashboard
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        
+        <ul class="nav">
+          {% if current_user.is_authenticated %}
+          <li class="nav-item {% if 'index' in segment %} active {% endif %}">
+            <a class="nav-link" href="/">
+              <i class="material-icons"style="border-right: 2px solid #a9a9a9; padding-right: 35px;" >masks</i>
+              <i class="material-icons" >thermostat</i>
+              <p> View #1</p>
+            </a>
+          </li>
+
+          <li class="nav-item {% if 'camera02' in segment %} active {% endif %}">
+            <a class="nav-link" href="/camera02.html">
+              <i class="material-icons" style="border-right: 2px solid #a9a9a9; padding-right: 35px;">6_ft_apart</i>
+              <i class="material-icons" style="margin-left: -8px;">groups</i>
+              <p>View #2 </p>
+            </a>
+          </li>
+
+          <li class="nav-item {% if 'drone' in segment %} active {% endif %}">
+            <a class="nav-link" href="/drone.html">
+              <i class="material-icons" >remove_red_eye</i>
+              <p>Drone </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item {% if 'analytics' in segment %} active {% endif %}">
+            <a class="nav-link" href="/analysis">
+              <i class="material-icons">analytics</i>
+              <p>Analytics</p>
+            </a>
+          </li>
+          <li class="nav-item {% if 'ui-tables' in segment %} active {% endif %}">
+            <a class="nav-link" href="/table">
+              <i class="material-icons">report_problem</i>
+              <p>Violations </p>
+            </a>
+          </li>
+        
+    
+          
+
+          <li class="nav-item ">
+            <a class="nav-link" href="{{ url_for('base_blueprint.logout') }}" >
+              <i class="material-icons">directions_run</i>
+              <p>Logout</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" onclick="notificaion_danger()" >
+              <i class="material-icons"></i>
+              <p></p>
+            </a>
+          </li>
+
+
+            
+          
+
+          {% endif %}
+
+        </ul>
+
+
+      </div>
+
+    </div>

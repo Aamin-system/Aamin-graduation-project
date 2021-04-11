@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+
+
+    <div class = "row">
+      <div class="col-md-6">
+        <h5 class="card-title">CAM 03</h5>
+        <h6 class="card-subtitle mb-2 text-muted">This is a live feed from camera 03</h6>
+        {% block video %}
+        <div class="" style="background: url({{ url_for('base_blueprint.local_test3')}})" height='300' width="300">
+          <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+          {% include '_live_tag.html'%}
+        </div>
+      </div>
+     
+        <div class="col-md-6">
+          <h5 class="card-title">CAM 04</h5>
+          <h6 class="card-subtitle mb-2 text-muted">This is a live feed from camera 04</h6>
+         
+          <div class="" style="background: url({{ url_for('base_blueprint.local_test4')}})">
+            <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+          {% include '_live_tag.html'%}
+          </div>
+        </div>
+        {% endblock %}
+      </div>
+    </div>
+
+        
+    
+
+    
+    
+  
+      
+
+{% endblock content %}

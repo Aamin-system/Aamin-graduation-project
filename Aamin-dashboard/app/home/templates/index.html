@@ -1,0 +1,121 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+
+{% block stylesheets %}
+<style> 
+  #video {margin-bottom: 150px;}
+  #cam02{ margin-bottom: 150px;}
+  #test{
+    font-size: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<audio id="audio" src="/static/assets/img/alarm.mp3"></audio>
+
+    <div class = "row">
+      
+      <div class="col-md-6">
+        <h5 class="card-title">CAM 01</h5>
+        <h6 class="card-subtitle mb-2 text-muted">This is a live feed from camera 01</h6>
+        {% block video %}
+        <div class="" style="background: url({{ url_for('base_blueprint.local_test')}}) ">
+          <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+          {% include '_live_tag.html'%}
+        </div>
+        
+        </div>
+
+        
+      
+        <div class="col-md-6">
+          <h5 class="card-title">CAM 02</h5>
+          <h6 class="card-subtitle mb-2 text-muted">This is a live feed from camera 02</h6>
+          
+          <div class="" style="background: url({{ url_for('base_blueprint.local_test2')}}) ">
+            <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+            {% include '_live_tag.html'%}
+          </div>
+          {% endblock %}
+      </div>
+    </div>
+    <div class = "row">
+    <div class="col-md-12 ">
+          <div class="card card-chart">
+          <canvas id="myChart" ></canvas>
+        </div>
+      </div>
+    </div>
+
+    
+
+  
+
+{% endblock content %}
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script>
+  var myFn = function (filename, callback) {
+    // do your file downloading
+    console.log('Downloading ', filename);
+    callback();
+};
+
+if ("{{ Note }}" == "True") {
+  alert("hi there")
+    myFn('scripts.html', function(notificaion_danger){
+        
+    });    
+
+}
+</script>
+
+<script >
+
+  var ctx = document.getElementById('myChart');
+  
+   var myDoughnutChart = new Chart(ctx, {
+      type: 'doughnut',
+      data : {
+      datasets: [{
+          data: [40,60],
+    backgroundColor: ["red", "Green"], 
+  
+      }],
+  
+      // These labels appear in the legend and in the tooltips when hovering different arcs
+      labels: [
+          'Full',
+          'Free',
+      ]
+  },
+  
+      options:{
+          responsive: true,
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Room Occupancy'
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        }
+  });
+  
+  </script>
+
+  
+
+{% endblock javascripts %}

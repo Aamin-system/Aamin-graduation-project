@@ -1,0 +1,369 @@
+
+{% extends "layouts/base.html" %}
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+
+{% block stylesheets %}
+<style>
+    #myChart{
+        margin-bottom: 100px;
+    }
+    #myChart2{
+        margin-bottom: 100px;
+    }
+
+
+
+    tr #header{
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        text-align: center;
+        font-weight: bold;
+        background-color: white;
+        color: black;
+        width:100%;
+        font-size: 15pt;
+      
+      
+      }
+
+    #viol {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+      }
+      
+      .center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      #viol td, #viol th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #viol tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #viol tr:hover {background-color: #ddd;}
+      
+      #viol th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #8e5eb6;
+        color: white;
+      }
+
+      #report {
+          display: none;
+      }
+
+      .button {
+        background-color: #a356e2;
+        border: none;
+        color: white;
+        padding: 10px 23px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition-duration: 0.4s;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 7px;
+        cursor: pointer;
+        margin: auto;
+      }
+
+
+      .button:hover {
+      background-color: #3442c0;
+      color: white;
+}
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div id="report" >
+
+  
+    <table class=center id=viol>
+
+     <thead>
+
+      <tr>
+        <p class="center" style="width:100%; text-align: center; font-size: 15pt; font-weight: bold;">Violations report</p>
+      </tr>
+
+
+        <tr>
+            <th>ID </th>
+            <th>Type </th>
+            <th>Date </th>
+            <th>Time </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for info in data %}
+            <tr>
+                <td>{{ info.ID }}</td>
+                <td>{{ info.Type }}</td>
+                <td>{{ info.Date }}</td>
+                <td>{{ info.Time }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+   
+    </table> 
+</div>
+<div>
+    
+    <button class="button" id="pdfbut" >pdf report</button>
+</div>
+
+
+<div class ="row">
+    <div class = "col-md-6">
+        <canvas id = "myChart" ></canvas>
+    </div>
+    <div class = "col-md-6">
+        <canvas id = "myChart2" ></canvas>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <canvas id = "myChart3"></canvas>
+    </div>
+    <div class="col-md-6">
+        <canvas id = "myChart4"></canvas>
+    </div>
+</div>
+
+{% endblock content %}
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<input type="hidden" id="days" name="variable" value="{{ days }}">
+<input type="hidden" id="types" name="variable" value="{{ types }}">
+<input type="hidden" id="months" name="variable" value="{{ months }}">
+
+<script type="text/javascript">
+var days_data = [];
+days_data = JSON.parse(document.getElementById("days").value);
+var ctx = document.getElementById('myChart')
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday','Friday'],
+        datasets: [{
+            label: '# Violations / Day',
+            data: days_data,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 102, 178, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 102, 178, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+</script>
+
+<script>
+var months_data = []
+months_data = JSON.parse(document.getElementById("months").value);
+
+    var ctx = document.getElementById('myChart2')
+    let chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['January', 'February', 'March', 'April'],
+        datasets: [{
+            label: '# Of Violations / Month',
+            data: months_data,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.6)'],
+            borderColor: [
+                'rgba(255, 99, 132, 0.8)']
+
+        }],
+        
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 50,
+                    suggestedMax: 100
+                }
+            }]
+        }
+    }
+});
+</script>
+<script>
+var types_data = [];
+types_data = JSON.parse(document.getElementById("types").value);
+var ctx = document.getElementById("myChart3")
+var myDoughnutChart = new Chart(ctx, {
+      type: 'pie',
+      data : {
+      datasets: [{
+          data: types_data,
+    backgroundColor: ["rgba(54, 162, 235, 1)", "rgba(255, 206, 86, 1)","rgba(255, 99, 132, 1)","rgba(75, 192, 192, 1)"], 
+    
+      }],
+  
+      // These labels appear in the legend and in the tooltips when hovering different arcs
+      labels: [
+          'Face Mask',
+          'Social Distancing',
+          "High Temperature",
+          "Room Occupancy "
+      ]
+  },
+  
+      options:{
+          responsive: true,
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Types of Violations '
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        }
+  });
+
+</script>
+<script>
+        var ctx = document.getElementById('myChart4');
+  
+  var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data : {
+    datasets: [{
+        data: [40,60],
+  backgroundColor: ["red", "Green"], 
+
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Full',
+        'Free',
+    ]
+},
+
+    options:{
+        responsive: true,
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Room Occupancy'
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+});
+</script>
+
+
+<script>
+
+function downloadPDFWithPDFMake() {
+  var tableHeaderText = [...document.querySelectorAll('#viol thead tr th')].map(thElement => ({ text: thElement.textContent, style: 'tableHeader' }));
+  //var tablehead = [...document.querySelectorAll('#viol thead tr p')];
+  var tableRowCells = [...document.querySelectorAll('#viol tbody tr td')].map(tdElement => ({ text: tdElement.textContent, style: 'tableData' }));
+  var tableDataAsRows = tableRowCells.reduce((rows, cellData, index) => {
+    if (index % 4 === 0) {
+      rows.push([]);
+    }
+
+    rows[rows.length - 1].push(cellData);
+    return rows;
+  }, []);
+
+  var docDefinition = {
+    header: { text: 'Violations report', margin: [110, 80, 0, 0]},
+    footer: function(currentPage, pageCount) { return ({ text: `Page ${currentPage} of ${pageCount}`, alignment: 'center' }); },
+    content: [
+      {
+        style: 'tableExample',
+        table: {
+          headerRows: 1,
+          body: [
+            tableHeaderText,
+            ...tableDataAsRows,
+           
+          ]
+        },
+        layout: {
+          fillColor: function(rowIndex) {
+            if (rowIndex === 0) {
+              return '#911375';
+            }
+            return (rowIndex % 2 === 0) ? '#f2f2f2' : null;
+          }
+        },
+      },
+    ],
+    styles: {
+      tableExample: {
+        margin: [110, 80, 0, 0],
+      },
+      tableHeader: {
+        margin: 12,
+        color: 'white',
+        alignment: 'center',
+      },
+      tableData: {
+        margin: 12,
+      },
+   
+    },
+  };
+  pdfMake.createPdf(docDefinition).download('sds-report');
+}
+
+document.querySelector('#pdfbut').addEventListener('click', downloadPDFWithPDFMake);
+
+
+</script>
+
+{% endblock javascripts %}

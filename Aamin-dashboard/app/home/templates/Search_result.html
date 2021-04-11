@@ -1,0 +1,85 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Search Results {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+
+{% block stylesheets %}
+{% endblock stylesheets %}
+
+{% block content %}
+{% if results %}
+<h3>Number of search results for "{{ search_term }}" is {{ results|length }}</h3>
+<div class="row">
+	<div class="col-md-12">
+	  <div class="card">
+	<div class="card-header card-header-primary">
+	<h4 class="card-title ">Violation Table</h4>
+	<p class="card-category"> Log of {{search_term}} Violations</p>
+		</div>
+		<div class="card-body">
+			<div class="table-responsive">
+			  <table class="table">
+				<thead class=" text-primary">
+				  <th>
+					Violation snapshot
+				  </th>
+				  <th>
+					ID
+				  </th>
+				  <th>
+					Type
+				  </th>
+				  <th>
+					Date 
+				  </th>
+				  <th>
+					Time
+				  </th>
+				</thead>
+				<tbody>	
+	{% for search in results %}
+	{% set outer_loop = loop %}
+	 {% for image in img %}  
+	  {% if loop.index == outer_loop.index %}
+		<tr>
+			<td>
+				<a href="/violations/{{search.ID}}">
+				<img src="data:image/jpeg;base64,{{image}}"height='300' width="300" />
+				</a>
+			</td>
+			<td>
+				<a href="/violations/{{search.ID}}">   
+					{{ search.ID }}
+				</a>
+			</td>
+			<td>
+				{{search.Type}}
+			</td>
+			<td>
+				{{search.Date}}
+			</td>
+			<td>
+				{{search.Time}}
+			</td>
+		  </tr>
+		
+	
+	
+		  	{% endif %}
+		  {% endfor %}
+	{% endfor %}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+{% else %}
+	<h3> search term '{{search_term}}' was not found ! </h3>
+{% endif %}		
+
+{% endblock content %}

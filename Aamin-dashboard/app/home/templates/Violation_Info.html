@@ -1,0 +1,147 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Search Results {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+
+{% block stylesheets %}
+<style>
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+{% if results %}
+<div class="row">
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header card-header-primary">
+        <h4 class="card-title ">Violation details</h4>
+        <p class="card-category"> Log of Violations # {{results.ID}}</p>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                  <div class='row'>
+                    <div class='col-md-12'>
+                       <h2 class='monospace' style=" text-align: center;"> 
+                        <i class="material-icons">report_problem</i>
+                        Violation snapshot </h2> 
+                        {% if img %}
+                       <img  class="center" src="data:image/jpeg;base64,{{img}}"height='700' width="700" />
+                        </div>
+                    </div>
+                        {% else %}
+                        <img class = 'center' src="https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg" height="700" width="700">
+                        {% endif %}
+
+                        {% if vid %}
+                    <div class='row'>
+                        <div class='col-md-12'>
+                            <h2 class='monospace' style=" text-align: center;"> 
+                            <i class="material-icons">report_problem</i>
+                            Violation video </h2> 
+                        
+                            <video id="player" width="100%" height="auto" controls>
+                                <source src="/static/assets/video/{{vid}}", type="video/mp4" >
+                            </video>
+                            </div>
+                        </div>
+                        
+                        {% endif %}
+
+
+                    <div class = 'row'>
+                        <div class='col-md-12'>
+                            <br>
+                            <h2>                             <i class="material-icons">info</i>
+                                Information About The Violation:</h2>
+                            <br>
+
+                           <ul> 
+                              <li> <h4>Violation ID : {{results.ID}}</h4></li>
+                              <li> <h4>Violation Type : {{results.Type}}</h4></li>
+                              {% if results.Temperature %}
+                              <li><h4>Temperature : {{results.Temperature}}</h4></li>
+                              {% endif %}
+                              
+                                <ul>
+                                <li><h5> Date : {{results.Date}} </h5></li>
+                                <li><h5> Time : {{results.Time}} </h5></li>
+                                <li><h5> Day : {{day}} </h5></li>
+
+                                </ul>                            
+                           </ul>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
+{% else %}
+    <h2> ID NOT FOUND</h2>
+    <h3> No entry for for ID in the databse </h3>
+{% endif %}   
+{% endblock content %}
+
+
+
+
+{% block javascripts %}
+<script>
+    "use strict";
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //function byId(id,parent){return (parent == undefined ? document : parent).getElementById(id);}
+ 
+    
+    // callback gets data via the .target.result field of the param passed to it.
+    function loadFileAsBinary(fileObj, loadedCallback)
+    {
+        var reader = new FileReader();
+        reader.onload = loadedCallback;
+        reader.readAsBinaryString( fileObj );
+    }
+    
+    
+    window.addEventListener('load', onDocLoaded, false);
+    function onDocLoaded()
+    {
+       
+        document.getElementById("player").addEventListener('change', onFileInput2Changed, false);
+        //byId('fileInput2').addEventListener('change', onFileInput2Changed, false);
+    }
+
+    
+    function onFileInput2Changed(evt)
+    {
+        if (this.files.length != 0)
+        {
+            var curFile = this.files[0];
+            loadFileAsBinary(curFile, onVideoFileReadAsBinary);
+    
+            function onVideoFileReadAsBinary(evt)
+            {
+                var rawResult = evt.target.result;
+                var b64Result = btoa(rawResult);
+    
+                var prefaceString = "data:" + curFile.type + ";base64,";
+    //          byId('vidTgt').src = "data:video/mp4;base64," + b64Result;
+    document.getElementById("player").src = prefaceString + b64Result;
+    document.getElementById("player").play();
+            }
+        }
+    }
+    </script>
+
+  
+{% endblock javascripts %}

@@ -1,0 +1,81 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Violations Table</h4>
+                  <p class="card-category"> Log of all Violations :&nbsp;&nbsp; {{count}} Violations</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class=" text-primary">
+                        <th>
+                          Violation snapshot
+                          </th>
+                          <th>
+                          ID
+                          </th>
+                          <th>
+                          Type
+                          </th>
+                          <th>
+                          Date 
+                          </th>
+                          <th>
+                          Time
+                          </th>
+                        </thead>
+                        <tbody>	
+                      {% for entry in data %}
+                       {% set outer_loop = loop %}
+                        {% for image in img %}  
+                         {% if loop.index == outer_loop.index %}
+                    <tr>
+                      <td>
+                        <a href="/violations/{{entry.ID}}">
+                        <img  src="data:image/jpeg;base64,{{image}}"height='200' width="200" />
+                      </a>
+                      </td>
+                      <td>
+                        <a href="/violations/{{entry.ID}}">   
+                        {{ entry.ID }} 
+                        </a>
+                      </td>
+                      <td>
+                        {{ entry.Type }}
+                      </td>
+                      <td>
+                        {{ entry.Date }}
+                      </td>
+                      <td>
+                        {{ entry.Time }}
+                      </td>
+                      </tr>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+<div class="row">
+  <a href="/dbtest"><button >Notification test </button></a>
+</div>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+{% endblock javascripts %}
