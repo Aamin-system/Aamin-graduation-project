@@ -15,7 +15,7 @@ precautions regulations - human distancing and preserving wearing face masks, in
 measuring body temperature, which can contribute to reducing the chances of spreading the virus
 in any place where people gather.
 
-## credit to:
+### credit to:
 [Qengineering] (https://github.com/Qengineering/Face-Mask-Detection-Raspberry-Pi-64-bits)
 [Subikshaa] (https://github.com/Subikshaa/Social-Distance-Detection-using-OpenCV)
 [Material Dashboard Flask](https://www.creative-tim.com/product/material-dashboard-flask)
